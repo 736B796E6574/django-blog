@@ -42,12 +42,21 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'blog',
-    'django_summernote',
+    'django_summernote', 
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,6 +85,8 @@ TEMPLATES = [
         },
     },
 ]
+
+ACCOUNT_EMAIL_VERIFICATION = 'none' 
 
 WSGI_APPLICATION = 'codestar.wsgi.application'
 
