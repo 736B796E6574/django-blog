@@ -51,7 +51,10 @@ INSTALLED_APPS = [
     'cloudinary',
     'blog',
     'django_summernote', 
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 SITE_ID = 1
 
